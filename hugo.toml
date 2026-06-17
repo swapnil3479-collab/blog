@@ -6,7 +6,7 @@ paginate = 10
 
 [params]
   author = "Swapnil"
-  description = "Thoughts on tech, AI, and building things"
+  description = "Deep dives into AI, machine learning, and the systems that power them."
   ShowReadingTime = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
@@ -22,7 +22,7 @@ paginate = 10
   [params.profileMode]
     enabled = true
     title = "Swapnil"
-    subtitle = "Writing about AI, tech, and the things I build from scratch. No fluff."
+    subtitle = "Deep dives into AI and machine learning — how models work, how systems are built, and what it all means."
     imageUrl = "https://api.dicebear.com/7.x/initials/svg?seed=Swapnil&backgroundColor=6366f1&textColor=ffffff&fontSize=40"
     imageTitle = "Swapnil"
     imageWidth = 100
