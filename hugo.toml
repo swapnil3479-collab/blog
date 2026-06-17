@@ -1,0 +1,31 @@
+baseURL = "https://swapnil3479-collab.github.io/blog/"
+languageCode = "en-us"
+title = "Swapnilsblog"
+theme = "PaperMod"
+paginate = 10
+
+[params]
+  author = "Swapnil"
+  description = "Thoughts on tech, AI, and building things"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowShareButtons = false
+  defaultTheme = "auto"
+
+  [params.homeInfoParams]
+    Title = "Hey, I'm Swapnil"
+    Content = "I write about tech, AI, and the things I build. Welcome."
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 20
