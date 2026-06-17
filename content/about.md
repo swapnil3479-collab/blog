@@ -24,9 +24,9 @@ If you've ever read a breathless AI article and thought *"but how does it actual
 
 ## Why I write this
 
-I got tired of AI content that either oversimplifies to the point of uselessness or hides behind jargon to sound smart. There's a middle ground — technically honest but still readable — and that's what I'm trying to build here.
+AI and ML are moving fast, and the best way I've found to really understand something is to write about it. Every post starts with genuine curiosity — something I wanted to figure out, a system I was building, or a concept that clicked after I dug deep enough.
 
-I also build things. Most posts come from something I was actually trying to understand or implement, which means the questions I'm answering are real ones.
+Writing forces clarity. If I can explain it well, I actually understand it. If I can't, I go back and learn more. That loop is what keeps this blog honest and worth reading.
 
 ## Get in touch
 
