@@ -14,8 +14,10 @@ paginate = 10
   ShowShareButtons = false
   ShowToc = true
   defaultTheme = "auto"
-  disableThemeToggle = false
   DateFormat = "January 2, 2006"
+
+  [params.assets]
+    disableFingerprinting = true
 
   [params.profileMode]
     enabled = true
@@ -29,10 +31,6 @@ paginate = 10
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/swapnil3479-collab"
-
-  [[params.socialIcons]]
-    name = "rss"
-    url = "/blog/index.xml"
 
 [menu]
   [[menu.main]]

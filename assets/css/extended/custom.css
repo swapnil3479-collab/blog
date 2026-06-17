@@ -1,173 +1,221 @@
-/* ============================================
-   SWAPNILSBLOG — Custom Theme
-   ============================================ */
+/* =============================================
+   SWAPNILSBLOG – Custom Design
+   ============================================= */
 
-/* --- Accent color tokens --- */
+/* --- Color tokens --- */
 :root {
-  --accent:       #6366f1;
-  --accent-hover: #4f46e5;
-  --accent-soft:  rgba(99, 102, 241, 0.12);
-  --radius-card:  14px;
-  --radius-tag:   999px;
-  --transition:   0.2s ease;
+  --accent:      #6366f1;
+  --accent-2:    #8b5cf6;
+  --accent-soft: rgba(99, 102, 241, 0.1);
+  --accent-mid:  rgba(99, 102, 241, 0.25);
+  --card-shadow: 0 2px 12px rgba(99, 102, 241, 0.1);
+  --card-shadow-hover: 0 8px 28px rgba(99, 102, 241, 0.22);
 }
 
-.dark {
-  --accent:       #818cf8;
-  --accent-hover: #6366f1;
-  --accent-soft:  rgba(129, 140, 248, 0.14);
+[data-theme=dark] {
+  --accent:      #818cf8;
+  --accent-2:    #a78bfa;
+  --accent-soft: rgba(129, 140, 248, 0.12);
+  --accent-mid:  rgba(129, 140, 248, 0.28);
+  --card-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  --card-shadow-hover: 0 8px 28px rgba(129, 140, 248, 0.25);
 }
 
-/* ============================================
-   NAVIGATION
-   ============================================ */
-.nav {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+/* =============================================
+   NAVIGATION BAR
+   ============================================= */
+.header {
+  border-bottom: 1px solid var(--border);
+  background: var(--theme);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.logo a,
-.logo-switches {
-  font-weight: 700;
-  letter-spacing: -0.3px;
-}
-
-/* Active nav link accent underline */
-.menu a:hover {
-  color: var(--accent) !important;
-}
-
-/* ============================================
-   PROFILE / HOME PAGE
-   ============================================ */
-.profile {
-  padding: 3.5rem 0 2rem;
-}
-
-/* Avatar ring */
-.profile img {
-  border-radius: 50%;
-  border: 3px solid var(--accent);
-  box-shadow: 0 0 0 6px var(--accent-soft);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.profile img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 0 8px var(--accent-soft);
-}
-
-/* Gradient name */
-.profile-info h1 {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+.logo a {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  font-size: 1.2rem;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-size: 2.6rem;
-  font-weight: 800;
-  letter-spacing: -1px;
-  margin-bottom: 0.4rem;
 }
 
-.profile-info .profile-subtitle {
-  font-size: 1.05rem;
-  opacity: 0.75;
-  max-width: 480px;
-  line-height: 1.6;
+.menu a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.menu a:hover {
+  background: var(--accent-soft);
+  color: var(--accent) !important;
+}
+
+/* =============================================
+   HOME – PROFILE MODE
+   ============================================= */
+.profile {
+  padding: 4rem 0 2.5rem;
+}
+
+/* Avatar with indigo ring */
+.profile img {
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 0 6px var(--accent-soft), var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 0 8px var(--accent-mid), var(--card-shadow-hover);
+}
+
+/* Gradient name */
+.profile_inner h1 {
+  background: linear-gradient(135deg, var(--primary) 20%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+/* Subtitle */
+.profile_inner span {
+  font-size: 1rem;
+  opacity: 0.65;
+  max-width: 440px;
+  display: block;
+  line-height: 1.7;
 }
 
 /* Social icons */
 .social-icons a {
-  transition: color var(--transition), transform var(--transition);
+  transition: color 0.18s ease, transform 0.18s ease;
 }
 
 .social-icons a:hover {
-  color: var(--accent);
+  color: var(--accent) !important;
   transform: translateY(-2px);
 }
 
-/* ============================================
-   POST CARDS (listing pages)
-   ============================================ */
+/* =============================================
+   POST CARDS – always visible styling
+   ============================================= */
 .post-entry {
-  border-radius: var(--radius-card);
+  border-radius: 12px;
   border: 1px solid var(--border);
-  transition: transform var(--transition),
-              box-shadow var(--transition),
-              border-color var(--transition);
-  padding: 1.4rem 1.6rem;
-  margin-bottom: 1rem;
+  background: var(--entry);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 1.2rem;
+  /* Accent left bar */
+  border-left: 3px solid var(--accent);
 }
 
 .post-entry:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px var(--accent-soft);
-  border-color: var(--accent);
+  box-shadow: var(--card-shadow-hover);
+  border-left-color: var(--accent-2);
+  border-top-color: var(--accent-soft);
+}
+
+/* Inner padding */
+.post-entry > *,
+.post-entry .entry-header,
+.post-entry .entry-content,
+.post-entry .entry-footer {
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+}
+
+.post-entry .entry-header {
+  padding-top: 1.2rem;
+}
+
+.post-entry .entry-footer {
+  padding-bottom: 1.2rem;
+}
+
+/* Card title */
+.entry-header h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: var(--primary);
+  transition: color 0.18s ease;
 }
 
 .post-entry:hover .entry-header h2 {
   color: var(--accent);
 }
 
-.entry-header h2 {
-  transition: color var(--transition);
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: -0.2px;
-}
-
-.entry-content p {
-  opacity: 0.8;
+/* Card excerpt */
+.entry-content {
+  color: var(--secondary);
+  font-size: 0.9rem;
   line-height: 1.65;
-  font-size: 0.95rem;
+  margin: 0.5rem 0 0.6rem;
 }
 
+/* Card meta (date, read time) */
 .entry-footer {
-  font-size: 0.8rem;
-  opacity: 0.55;
-  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  opacity: 0.5;
   letter-spacing: 0.2px;
 }
 
-/* ============================================
-   TAGS / TERMS
-   ============================================ */
+/* =============================================
+   TAGS
+   ============================================= */
 .terms-tags a,
 .post-tags a {
-  border-radius: var(--radius-tag);
+  border-radius: 999px;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.3px;
-  padding: 0.3rem 0.85rem;
-  transition: background var(--transition),
-              color var(--transition),
-              transform var(--transition);
-  border: 1px solid var(--border);
+  padding: 0.25rem 0.85rem;
+  border: 1px solid var(--accent-mid);
+  background: var(--accent-soft);
+  color: var(--accent);
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
 
 .terms-tags a:hover,
 .post-tags a:hover {
   background: var(--accent) !important;
   color: #fff !important;
-  border-color: var(--accent);
   transform: scale(1.05);
 }
 
-/* ============================================
+/* =============================================
    SINGLE POST PAGE
-   ============================================ */
+   ============================================= */
 .post-header {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--border);
 }
 
 .post-title {
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   font-weight: 800;
-  letter-spacing: -0.5px;
-  line-height: 1.25;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 130%);
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--primary) 30%, var(--accent) 120%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -175,15 +223,13 @@
 
 .post-meta {
   font-size: 0.82rem;
-  opacity: 0.55;
-  letter-spacing: 0.2px;
-  margin-top: 0.75rem;
+  opacity: 0.5;
+  margin-top: 0.6rem;
 }
 
-/* Post body typography */
 .post-content {
-  font-size: 1.02rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.85;
 }
 
 .post-content h2 {
@@ -191,51 +237,47 @@
   font-weight: 700;
   margin-top: 2.5rem;
   letter-spacing: -0.3px;
-  color: var(--primary);
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--accent-soft);
 }
 
 .post-content h3 {
   font-size: 1.2rem;
   font-weight: 700;
   margin-top: 2rem;
+  color: var(--accent);
 }
 
-/* Accent left border on blockquotes */
 .post-content blockquote {
   border-left: 3px solid var(--accent);
-  padding-left: 1.2rem;
-  opacity: 0.85;
+  background: var(--accent-soft);
+  padding: 0.8rem 1.2rem;
+  border-radius: 0 8px 8px 0;
   font-style: italic;
+  opacity: 0.9;
 }
 
-/* Inline code pill */
 .post-content code:not(pre code) {
   background: var(--accent-soft);
   color: var(--accent);
   border-radius: 5px;
-  padding: 0.15em 0.45em;
-  font-size: 0.88em;
+  padding: 0.12em 0.4em;
+  font-size: 0.87em;
 }
 
-/* Code block */
-.post-content pre {
-  border-radius: 10px;
-  border: 1px solid var(--border);
-}
-
-/* Bold text accent */
 .post-content strong {
   color: var(--primary);
   font-weight: 700;
 }
 
-/* ============================================
-   PREV / NEXT POST NAV
-   ============================================ */
+/* =============================================
+   PAGINATION NAV (prev/next)
+   ============================================= */
 .paginav {
-  border-radius: var(--radius-card);
+  border-radius: 12px;
   border: 1px solid var(--border);
   overflow: hidden;
+  margin-top: 2rem;
 }
 
 .paginav a:hover {
@@ -244,55 +286,70 @@
 
 .paginav .title {
   color: var(--accent);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
 }
 
-/* ============================================
+/* =============================================
    TABLE OF CONTENTS
-   ============================================ */
-.toc {
+   ============================================= */
+details.toc {
   border-radius: 10px;
-  border: 1px solid var(--border);
-  padding: 1rem 1.2rem;
+  border: 1px solid var(--accent-mid);
   background: var(--accent-soft);
+  margin-bottom: 1.5rem;
 }
 
-.toc details summary {
+details.toc summary {
   font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.3px;
+  font-size: 0.82rem;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
   color: var(--accent);
-  cursor: pointer;
 }
 
-/* ============================================
+/* =============================================
+   SCROLL-TO-TOP BUTTON
+   ============================================= */
+.top-link {
+  background: var(--accent) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 14px var(--accent-mid);
+}
+
+.top-link svg {
+  fill: #fff;
+}
+
+/* =============================================
+   PAGE HEADER (Posts / Tags pages)
+   ============================================= */
+.page-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* =============================================
    FOOTER
-   ============================================ */
+   ============================================= */
 .footer {
-  opacity: 0.5;
+  opacity: 0.45;
   font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
 }
 
-/* ============================================
-   SCROLLBAR (webkit)
-   ============================================ */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--accent-soft);
-  border-radius: 999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
-}
+/* =============================================
+   SCROLLBAR
+   ============================================= */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--accent-soft); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
