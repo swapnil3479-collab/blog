@@ -12,11 +12,27 @@ paginate = 10
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowShareButtons = false
+  ShowToc = true
   defaultTheme = "auto"
+  disableThemeToggle = false
+  DateFormat = "January 2, 2006"
 
-  [params.homeInfoParams]
-    Title = "Hey, I'm Swapnil"
-    Content = "I write about tech, AI, and the things I build. Welcome."
+  [params.profileMode]
+    enabled = true
+    title = "Swapnil"
+    subtitle = "Writing about AI, tech, and the things I build from scratch. No fluff."
+    imageUrl = "https://api.dicebear.com/7.x/initials/svg?seed=Swapnil&backgroundColor=6366f1&textColor=ffffff&fontSize=40"
+    imageTitle = "Swapnil"
+    imageWidth = 100
+    imageHeight = 100
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/swapnil3479-collab"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/blog/index.xml"
 
 [menu]
   [[menu.main]]

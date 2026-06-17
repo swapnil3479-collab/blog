@@ -1,0 +1,298 @@
+/* ============================================
+   SWAPNILSBLOG — Custom Theme
+   ============================================ */
+
+/* --- Accent color tokens --- */
+:root {
+  --accent:       #6366f1;
+  --accent-hover: #4f46e5;
+  --accent-soft:  rgba(99, 102, 241, 0.12);
+  --radius-card:  14px;
+  --radius-tag:   999px;
+  --transition:   0.2s ease;
+}
+
+.dark {
+  --accent:       #818cf8;
+  --accent-hover: #6366f1;
+  --accent-soft:  rgba(129, 140, 248, 0.14);
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.logo a,
+.logo-switches {
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+/* Active nav link accent underline */
+.menu a:hover {
+  color: var(--accent) !important;
+}
+
+/* ============================================
+   PROFILE / HOME PAGE
+   ============================================ */
+.profile {
+  padding: 3.5rem 0 2rem;
+}
+
+/* Avatar ring */
+.profile img {
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 0 6px var(--accent-soft);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.profile img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 8px var(--accent-soft);
+}
+
+/* Gradient name */
+.profile-info h1 {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 0.4rem;
+}
+
+.profile-info .profile-subtitle {
+  font-size: 1.05rem;
+  opacity: 0.75;
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+/* Social icons */
+.social-icons a {
+  transition: color var(--transition), transform var(--transition);
+}
+
+.social-icons a:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   POST CARDS (listing pages)
+   ============================================ */
+.post-entry {
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border);
+  transition: transform var(--transition),
+              box-shadow var(--transition),
+              border-color var(--transition);
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.post-entry:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.post-entry:hover .entry-header h2 {
+  color: var(--accent);
+}
+
+.entry-header h2 {
+  transition: color var(--transition);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.entry-content p {
+  opacity: 0.8;
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+.entry-footer {
+  font-size: 0.8rem;
+  opacity: 0.55;
+  margin-top: 0.75rem;
+  letter-spacing: 0.2px;
+}
+
+/* ============================================
+   TAGS / TERMS
+   ============================================ */
+.terms-tags a,
+.post-tags a {
+  border-radius: var(--radius-tag);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 0.3rem 0.85rem;
+  transition: background var(--transition),
+              color var(--transition),
+              transform var(--transition);
+  border: 1px solid var(--border);
+}
+
+.terms-tags a:hover,
+.post-tags a:hover {
+  background: var(--accent) !important;
+  color: #fff !important;
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+/* ============================================
+   SINGLE POST PAGE
+   ============================================ */
+.post-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 130%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.post-meta {
+  font-size: 0.82rem;
+  opacity: 0.55;
+  letter-spacing: 0.2px;
+  margin-top: 0.75rem;
+}
+
+/* Post body typography */
+.post-content {
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+.post-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  letter-spacing: -0.3px;
+  color: var(--primary);
+}
+
+.post-content h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+/* Accent left border on blockquotes */
+.post-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.2rem;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+/* Inline code pill */
+.post-content code:not(pre code) {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 5px;
+  padding: 0.15em 0.45em;
+  font-size: 0.88em;
+}
+
+/* Code block */
+.post-content pre {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+/* Bold text accent */
+.post-content strong {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* ============================================
+   PREV / NEXT POST NAV
+   ============================================ */
+.paginav {
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.paginav a:hover {
+  background: var(--accent-soft);
+}
+
+.paginav .title {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   TABLE OF CONTENTS
+   ============================================ */
+.toc {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 1rem 1.2rem;
+  background: var(--accent-soft);
+}
+
+.toc details summary {
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  opacity: 0.5;
+  font-size: 0.8rem;
+}
+
+/* ============================================
+   SCROLLBAR (webkit)
+   ============================================ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-soft);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
