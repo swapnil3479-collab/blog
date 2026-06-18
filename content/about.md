@@ -30,6 +30,6 @@ Writing forces clarity. If I can explain it well, I actually understand it. If I
 
 ## Get in touch
 
-If you've got feedback, a topic you want covered, or just want to talk AI — find me on GitHub:
+If you've got feedback, a topic you want covered, or just want to talk AI — drop me an email:
 
-**[github.com/swapnil3479-collab](https://github.com/swapnil3479-collab)**
+**[swapnilshah622000@gmail.com](mailto:swapnilshah622000@gmail.com)**
