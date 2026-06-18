@@ -4,9 +4,12 @@ title = "Swapnilsblog"
 theme = "PaperMod"
 paginate = 10
 
+[services]
+  [services.googleAnalytics]
+    ID = "G-J4C8BKSNYT"
+
 [params]
   author = "Swapnil"
-  googleAnalytics = "G-J4C8BKSNYT"
   description = "Deep dives into AI, machine learning, and the systems that power them."
   ShowReadingTime = true
   ShowPostNavLinks = true
