@@ -32,4 +32,4 @@ Writing forces clarity. If I can explain it well, I actually understand it. If I
 
 If you've got feedback, a topic you want covered, or just want to talk AI — drop me an email:
 
-**[swapnilshah622000@gmail.com](mailto:swapnilshah622000@gmail.com)**
+**swapnilshah622000@gmail.com**
