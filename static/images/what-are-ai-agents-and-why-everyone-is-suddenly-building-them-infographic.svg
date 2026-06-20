@@ -1,0 +1,47 @@
+<svg width="856" height="271" viewBox="0 0 856 271" xmlns="http://www.w3.org/2000/svg">
+  <rect width="856" height="271" fill="#f9fafb" rx="12"/>
+  <rect width="856" height="271" fill="none" stroke="#e5e7eb" stroke-width="1" rx="12"/>
+  <text x="428" y="54" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle" opacity="0.75">AI Agents in Numbers</text>
+  
+  <rect x="24" y="70" width="190" height="155" rx="10"
+        fill="#eef2ff" stroke="#6366f1" stroke-width="1.5" stroke-opacity="0.25"/>
+  <rect x="24" y="70" width="5" height="155" rx="4" fill="#6366f1"/>
+  <text x="119" y="135"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif"
+        font-size="44" font-weight="800" fill="#6366f1" text-anchor="middle">57%</text>
+  <text x="119" y="167"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif"
+        font-size="13" font-weight="600" fill="#374151" text-anchor="middle" opacity="0.85">Companies Using Agents</text>
+  <text x="119" y="190" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" opacity="0.75">already in production</text>
+  <rect x="230" y="70" width="190" height="155" rx="10"
+        fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.5" stroke-opacity="0.25"/>
+  <rect x="230" y="70" width="5" height="155" rx="4" fill="#8b5cf6"/>
+  <text x="325" y="135"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif"
+        font-size="44" font-weight="800" fill="#8b5cf6" text-anchor="middle">77%</text>
+  <text x="325" y="167"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif"
+        font-size="13" font-weight="600" fill="#374151" text-anchor="middle" opacity="0.85">SWE-Bench Score</text>
+  <text x="325" y="190" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" opacity="0.75">up from 14% in 2 years</text>
+  <rect x="436" y="70" width="190" height="155" rx="10"
+        fill="#ecfeff" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.25"/>
+  <rect x="436" y="70" width="5" height="155" rx="4" fill="#06b6d4"/>
+  <text x="531" y="135"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif"
+        font-size="44" font-weight="800" fill="#06b6d4" text-anchor="middle">$2B</text>
+  <text x="531" y="167"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif"
+        font-size="13" font-weight="600" fill="#374151" text-anchor="middle" opacity="0.85">Meta Paid for Manus</text>
+  <text x="531" y="190" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" opacity="0.75">agent orchestration layer</text>
+  <rect x="642" y="70" width="190" height="155" rx="10"
+        fill="#ecfdf5" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.25"/>
+  <rect x="642" y="70" width="5" height="155" rx="4" fill="#10b981"/>
+  <text x="737" y="135"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif"
+        font-size="44" font-weight="800" fill="#10b981" text-anchor="middle">2x</text>
+  <text x="737" y="167"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif"
+        font-size="13" font-weight="600" fill="#374151" text-anchor="middle" opacity="0.85">Faster Contract Review</text>
+  <text x="737" y="190" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif" font-size="11" fill="#6b7280" text-anchor="middle" opacity="0.75">90 min → 45 min</text>
+  <text x="832" y="265" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif" font-size="10" fill="#9ca3af" text-anchor="end">IBM, Anthropic, LinkedIn 2026</text>
+</svg>
