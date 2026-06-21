@@ -1,26 +1,26 @@
 /* ══════════════════════════════════════════════════════════════════════════════
-   COLOR PALETTE OVERRIDES
-   Light: barely-lavender page bg, pure white cards → natural depth
-   Dark:  deep navy-black bg, purple-tinted cards → richer than flat grey
+   COLOR PALETTE
+   Light: soft lavender bg, pure white cards
+   Dark:  deep navy-black bg, purple-tinted cards
 ══════════════════════════════════════════════════════════════════════════════ */
 
 :root {
-  --theme:     #f6f6ff;   /* page bg — very subtle lavender tint */
-  --entry:     #ffffff;   /* card bg — pure white pops against tinted bg */
-  --tertiary:  #ecedf8;   /* sidebar, TOC, code bg */
-  --border:    #dfe0f0;   /* borders — purple-tinted instead of plain grey */
-  --secondary: #64677e;   /* secondary text — cooler tone */
+  --theme:     #f4f4fd;
+  --entry:     #ffffff;
+  --tertiary:  #eaebf8;
+  --border:    #dcddf2;
+  --secondary: #5e6180;
 }
 
 [data-theme="dark"] {
-  --theme:     #0d0d16;   /* page bg — deep navy-black */
-  --entry:     #13131f;   /* card bg — slightly purple-tinted */
-  --tertiary:  #191928;   /* sidebar, TOC */
-  --border:    #26263c;   /* purple-tinted borders */
-  --secondary: #8c8eaa;   /* cooler secondary text */
-  --primary:   #e2e3f5;   /* slightly cool primary text */
-  --content:   #d4d5ec;   /* body text */
-  --code-bg:   #191928;
+  --theme:     #0b0b14;
+  --entry:     #12121e;
+  --tertiary:  #18182a;
+  --border:    #252540;
+  --secondary: #8c8eaa;
+  --primary:   #e2e3f5;
+  --content:   #d4d5ec;
+  --code-bg:   #18182a;
 }
 
 /* ── Smooth scrolling ───────────────────────────────────────────────────────── */
@@ -44,36 +44,185 @@ html {
 
 /* ── Header — frosted glass ─────────────────────────────────────────────────── */
 .header {
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-  background: rgba(246, 246, 255, 0.88) !important;
-  border-bottom: 1px solid rgba(99, 102, 241, 0.1) !important;
-  transition: background 0.3s ease, border-color 0.3s ease;
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  background: rgba(244, 244, 253, 0.85) !important;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.12) !important;
+  transition: background 0.3s ease;
 }
 
 [data-theme="dark"] .header {
-  background: rgba(13, 13, 22, 0.88) !important;
-  border-bottom: 1px solid rgba(99, 102, 241, 0.12) !important;
+  background: rgba(11, 11, 20, 0.85) !important;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.14) !important;
+}
+
+/* ── Site title ─────────────────────────────────────────────────────────────── */
+.logo a {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* ── Nav links ──────────────────────────────────────────────────────────────── */
+#menu a {
+  position: relative;
+  font-weight: 500 !important;
+  transition: color 0.18s ease !important;
+}
+
+#menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6366f1, #a78bfa);
+  border-radius: 2px;
+  transition: width 0.22s ease;
+}
+
+#menu a:hover::after {
+  width: 100%;
+}
+
+#menu a:hover {
+  color: #6366f1 !important;
+}
+
+/* ── Profile hero ───────────────────────────────────────────────────────────── */
+.profile {
+  position: relative;
+}
+
+.profile::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(ellipse at center,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(167, 139, 250, 0.06) 40%,
+    transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.profile > * {
+  position: relative;
+  z-index: 1;
+}
+
+[data-theme="dark"] .profile::before {
+  background: radial-gradient(ellipse at center,
+    rgba(99, 102, 241, 0.18) 0%,
+    rgba(167, 139, 250, 0.1) 40%,
+    transparent 70%);
+}
+
+/* ── Profile avatar ─────────────────────────────────────────────────────────── */
+.profile img {
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.25),
+              0 8px 30px rgba(99, 102, 241, 0.2) !important;
+  transition: box-shadow 0.3s ease, transform 0.3s ease !important;
+}
+
+.profile img:hover {
+  box-shadow: 0 0 0 7px rgba(99, 102, 241, 0.3),
+              0 16px 40px rgba(99, 102, 241, 0.28) !important;
+  transform: scale(1.05) !important;
+}
+
+/* ── Profile name ───────────────────────────────────────────────────────────── */
+.profile h1 {
+  letter-spacing: -0.03em !important;
+}
+
+/* ── Profile buttons ────────────────────────────────────────────────────────── */
+.profile .buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Primary CTA — filled indigo */
+.profile .buttons a:first-child {
+  background: linear-gradient(135deg, #4f46e5, #6366f1) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 999px !important;
+  padding: 10px 24px !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.01em !important;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35) !important;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease !important;
+  text-decoration: none !important;
+}
+
+.profile .buttons a:first-child:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.45) !important;
+  filter: brightness(1.08) !important;
+}
+
+/* Secondary CTA — outlined */
+.profile .buttons a:not(:first-child) {
+  background: transparent !important;
+  color: #6366f1 !important;
+  border: 1.5px solid rgba(99, 102, 241, 0.5) !important;
+  border-radius: 999px !important;
+  padding: 10px 24px !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease !important;
+  text-decoration: none !important;
+}
+
+.profile .buttons a:not(:first-child):hover {
+  background: rgba(99, 102, 241, 0.08) !important;
+  border-color: #6366f1 !important;
+  transform: translateY(-2px) !important;
+}
+
+[data-theme="dark"] .profile .buttons a:not(:first-child) {
+  color: #a5b4fc !important;
+  border-color: rgba(165, 180, 252, 0.35) !important;
+}
+
+[data-theme="dark"] .profile .buttons a:not(:first-child):hover {
+  background: rgba(99, 102, 241, 0.12) !important;
+  border-color: #a5b4fc !important;
 }
 
 /* ── Post cards ─────────────────────────────────────────────────────────────── */
 .post-entry {
-  border-radius: 14px !important;
+  border-radius: 16px !important;
   overflow: hidden;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
-  box-shadow: 0 1px 4px rgba(99, 102, 241, 0.06);
+  border: 1px solid var(--border) !important;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.05);
 }
 
 .post-entry:hover {
   transform: translateY(-5px);
+  border-color: rgba(99, 102, 241, 0.3) !important;
   box-shadow: 0 20px 48px rgba(99, 102, 241, 0.12) !important;
 }
 
 [data-theme="dark"] .post-entry {
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 [data-theme="dark"] .post-entry:hover {
+  border-color: rgba(99, 102, 241, 0.35) !important;
   box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6) !important;
 }
 
@@ -127,7 +276,7 @@ a.tag {
   letter-spacing: 0.03em !important;
   text-decoration: none !important;
   display: inline-block !important;
-  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, border-color 0.15s ease !important;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease !important;
 }
 
 .post-tags a:hover,
@@ -220,30 +369,6 @@ a.tag:hover {
   color: #6366f1 !important;
 }
 
-/* ── Profile avatar ─────────────────────────────────────────────────────────── */
-.profile img {
-  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.22), 0 8px 28px rgba(99, 102, 241, 0.18) !important;
-  transition: box-shadow 0.3s ease, transform 0.3s ease !important;
-}
-
-.profile img:hover {
-  box-shadow: 0 0 0 7px rgba(99, 102, 241, 0.3), 0 14px 36px rgba(99, 102, 241, 0.25) !important;
-  transform: scale(1.05) !important;
-}
-
-/* ── Profile buttons ────────────────────────────────────────────────────────── */
-.profile .buttons a {
-  border-radius: 999px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.01em !important;
-  transition: transform 0.18s ease, box-shadow 0.18s ease !important;
-}
-
-.profile .buttons a:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.32) !important;
-}
-
 /* ── Post title ─────────────────────────────────────────────────────────────── */
 .post-title {
   letter-spacing: -0.027em !important;
@@ -251,13 +376,6 @@ a.tag:hover {
 
 .entry-hint-parent {
   letter-spacing: -0.02em !important;
-}
-
-/* ── Pagination ─────────────────────────────────────────────────────────────── */
-.pagination .page-item a,
-.pagination .page-item span {
-  border-radius: 8px !important;
-  transition: background 0.15s ease, color 0.15s ease !important;
 }
 
 /* ── Share buttons ──────────────────────────────────────────────────────────── */
@@ -270,7 +388,7 @@ a.tag:hover {
 /* ── Footer ─────────────────────────────────────────────────────────────────── */
 .footer {
   font-size: 0.84rem !important;
-  opacity: 0.8 !important;
+  opacity: 0.75 !important;
 }
 
 /* ── Search box ─────────────────────────────────────────────────────────────── */
@@ -294,10 +412,6 @@ a.tag:hover {
   border: 1px solid var(--border) !important;
 }
 
-.paginav a {
-  transition: background 0.18s ease !important;
-}
-
 .paginav a:hover {
   background: rgba(99, 102, 241, 0.06) !important;
 }
@@ -312,13 +426,7 @@ a.tag:hover {
   opacity: 0.75 !important;
 }
 
-/* ── Nav links — subtle hover tint ─────────────────────────────────────────── */
-.header-nav .menu a:hover,
-.header-nav .menu a.active {
-  color: #6366f1;
-}
-
-/* ── List page background ───────────────────────────────────────────────────── */
+/* ── List page ──────────────────────────────────────────────────────────────── */
 .list {
   background: var(--theme) !important;
 }
