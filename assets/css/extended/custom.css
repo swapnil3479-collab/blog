@@ -1,3 +1,28 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   COLOR PALETTE OVERRIDES
+   Light: barely-lavender page bg, pure white cards → natural depth
+   Dark:  deep navy-black bg, purple-tinted cards → richer than flat grey
+══════════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --theme:     #f6f6ff;   /* page bg — very subtle lavender tint */
+  --entry:     #ffffff;   /* card bg — pure white pops against tinted bg */
+  --tertiary:  #ecedf8;   /* sidebar, TOC, code bg */
+  --border:    #dfe0f0;   /* borders — purple-tinted instead of plain grey */
+  --secondary: #64677e;   /* secondary text — cooler tone */
+}
+
+[data-theme="dark"] {
+  --theme:     #0d0d16;   /* page bg — deep navy-black */
+  --entry:     #13131f;   /* card bg — slightly purple-tinted */
+  --tertiary:  #191928;   /* sidebar, TOC */
+  --border:    #26263c;   /* purple-tinted borders */
+  --secondary: #8c8eaa;   /* cooler secondary text */
+  --primary:   #e2e3f5;   /* slightly cool primary text */
+  --content:   #d4d5ec;   /* body text */
+  --code-bg:   #191928;
+}
+
 /* ── Smooth scrolling ───────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
@@ -10,7 +35,7 @@ html {
   left: 0;
   width: 0%;
   height: 3px;
-  background: linear-gradient(90deg, #6366f1, #a78bfa, #06b6d4);
+  background: linear-gradient(90deg, #4f46e5, #6366f1, #a78bfa, #06b6d4);
   z-index: 9999;
   transition: width 0.08s linear;
   pointer-events: none;
@@ -21,14 +46,14 @@ html {
 .header {
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
-  background: rgba(255, 255, 255, 0.88) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  background: rgba(246, 246, 255, 0.88) !important;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1) !important;
   transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-body.dark .header {
-  background: rgba(29, 30, 32, 0.88) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+[data-theme="dark"] .header {
+  background: rgba(13, 13, 22, 0.88) !important;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.12) !important;
 }
 
 /* ── Post cards ─────────────────────────────────────────────────────────────── */
@@ -36,15 +61,20 @@ body.dark .header {
   border-radius: 14px !important;
   overflow: hidden;
   transition: transform 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: 0 1px 4px rgba(99, 102, 241, 0.06);
 }
 
 .post-entry:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 20px 48px rgba(99, 102, 241, 0.12) !important;
 }
 
-body.dark .post-entry:hover {
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55) !important;
+[data-theme="dark"] .post-entry {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .post-entry:hover {
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6) !important;
 }
 
 .entry-cover {
@@ -108,15 +138,15 @@ a.tag:hover {
   transform: translateY(-1px) !important;
 }
 
-body.dark .post-tags a,
-body.dark a.tag {
-  background: rgba(99, 102, 241, 0.12) !important;
+[data-theme="dark"] .post-tags a,
+[data-theme="dark"] a.tag {
+  background: rgba(99, 102, 241, 0.14) !important;
   color: #a5b4fc !important;
-  border-color: rgba(99, 102, 241, 0.28) !important;
+  border-color: rgba(99, 102, 241, 0.3) !important;
 }
 
-body.dark .post-tags a:hover,
-body.dark a.tag:hover {
+[data-theme="dark"] .post-tags a:hover,
+[data-theme="dark"] a.tag:hover {
   background: #6366f1 !important;
   color: #fff !important;
   border-color: #6366f1 !important;
@@ -128,7 +158,7 @@ body.dark a.tag:hover {
   border-right: none !important;
   border-top: none !important;
   border-bottom: none !important;
-  background: rgba(99, 102, 241, 0.04) !important;
+  background: rgba(99, 102, 241, 0.05) !important;
   border-radius: 0 10px 10px 0 !important;
   padding: 1.1rem 1.4rem !important;
   margin: 2rem 0 !important;
@@ -136,24 +166,24 @@ body.dark a.tag:hover {
   color: var(--secondary);
 }
 
-body.dark .post-content blockquote {
-  background: rgba(99, 102, 241, 0.09) !important;
+[data-theme="dark"] .post-content blockquote {
+  background: rgba(99, 102, 241, 0.1) !important;
 }
 
 /* ── Inline code ────────────────────────────────────────────────────────────── */
 .post-content :not(pre) > code {
   background: rgba(99, 102, 241, 0.08) !important;
-  color: #6366f1 !important;
+  color: #5153d6 !important;
   border: 1px solid rgba(99, 102, 241, 0.18) !important;
   border-radius: 5px !important;
   padding: 0.15em 0.45em !important;
   font-size: 0.875em !important;
 }
 
-body.dark .post-content :not(pre) > code {
-  background: rgba(99, 102, 241, 0.14) !important;
+[data-theme="dark"] .post-content :not(pre) > code {
+  background: rgba(99, 102, 241, 0.15) !important;
   color: #a5b4fc !important;
-  border-color: rgba(99, 102, 241, 0.25) !important;
+  border-color: rgba(99, 102, 241, 0.28) !important;
 }
 
 /* ── Code blocks ────────────────────────────────────────────────────────────── */
@@ -247,6 +277,7 @@ body.dark .post-content :not(pre) > code {
 #searchbox input {
   border-radius: 10px !important;
   border: 1px solid var(--border) !important;
+  background: var(--entry) !important;
   transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
 }
 
@@ -260,6 +291,7 @@ body.dark .post-content :not(pre) > code {
 .paginav {
   border-radius: 12px !important;
   overflow: hidden;
+  border: 1px solid var(--border) !important;
 }
 
 .paginav a {
@@ -270,7 +302,7 @@ body.dark .post-content :not(pre) > code {
   background: rgba(99, 102, 241, 0.06) !important;
 }
 
-body.dark .paginav a:hover {
+[data-theme="dark"] .paginav a:hover {
   background: rgba(99, 102, 241, 0.1) !important;
 }
 
@@ -278,4 +310,15 @@ body.dark .paginav a:hover {
 .breadcrumbs {
   font-size: 0.84rem !important;
   opacity: 0.75 !important;
+}
+
+/* ── Nav links — subtle hover tint ─────────────────────────────────────────── */
+.header-nav .menu a:hover,
+.header-nav .menu a.active {
+  color: #6366f1;
+}
+
+/* ── List page background ───────────────────────────────────────────────────── */
+.list {
+  background: var(--theme) !important;
 }
