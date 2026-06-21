@@ -44,3 +44,10 @@ An AI agent is different in four fundamental ways:
 **It plans.** Given a complex goal, an agent breaks it down into subtasks, figures out what order to tackle them in, and adjusts its plan when things go wrong — without you spelling it out step by step.
 
 Put those four things together and you get something qualitatively different from a chatbot. You get a system that can work.
+
+## References
+
+1. [What Are AI Agents? | IBM](https://www.ibm.com/think/topics/ai-agents)
+2. [Top 10 AI Dev Agents in 2026 | MojoAuth Blog](https://mojoauth.com/blog/top-10-ai-dev-agents)
+3. [State of AI Agents 2026: Autonomy is Here](https://www.linkedin.com/pulse/state-ai-agents-2026-autonomy-here-nishikant-dhanuka-pssge)
+4. [Forbes 2026 AI 50 List | Top Artificial Intelligence Companies](https://www.forbes.com/lists/ai50/)
