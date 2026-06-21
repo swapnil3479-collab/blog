@@ -66,10 +66,14 @@ html {
   letter-spacing: -0.02em !important;
 }
 
+/* ── Nav — no scrollbar ─────────────────────────────────────────────────────── */
+#menu {
+  overflow: visible !important;
+}
+
 /* ── Nav links ──────────────────────────────────────────────────────────────── */
 #menu a {
   position: relative;
-  font-weight: 500 !important;
   transition: color 0.18s ease !important;
 }
 
