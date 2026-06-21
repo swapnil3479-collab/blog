@@ -32,3 +32,10 @@ The scale of AI adoption has moved past the point where it can be dismissed as a
 The economic stakes match the adoption curve. AI is projected to add **$4.4 trillion to the global economy annually** — not in some distant future, but through technologies that already exist. The World Trade Organization estimates AI could boost global trade value by 34–37% by 2040.
 
 If 2025 proved that AI works, 2026 is about whether organizations can absorb it fast enough.
+
+## References
+
+1. [Stanford AI Index 2025 — Stanford HAI](https://hai.stanford.edu/ai-index/)
+2. [The State of AI in 2024 — McKinsey Global Survey](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)
+3. [GitHub Copilot: The World's Most Widely Adopted AI Developer Tool — GitHub Blog](https://github.blog/news-insights/product-news/github-copilot-the-worlds-most-widely-adopted-ai-developer-tool/)
+4. [World Trade Report 2024: AI and Inclusive Trade — WTO](https://www.wto.org/english/res_e/booksp_e/wtr24_e.htm)
