@@ -1,7 +1,24 @@
+<!-- Reading progress bar -->
+<div id="reading-progress"></div>
+
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>
   (function () {
-    const isDark = document.querySelector('html').dataset.theme === 'dark';
+    // Reading progress bar
+    var bar = document.getElementById('reading-progress');
+    if (bar) {
+      function updateBar() {
+        var doc = document.documentElement;
+        var scrolled = doc.scrollTop || document.body.scrollTop;
+        var total = doc.scrollHeight - doc.clientHeight;
+        bar.style.width = total > 0 ? (scrolled / total * 100) + '%' : '0%';
+      }
+      window.addEventListener('scroll', updateBar, { passive: true });
+      updateBar();
+    }
+
+    // Mermaid diagrams
+    var isDark = document.querySelector('html').dataset.theme === 'dark';
     mermaid.initialize({
       startOnLoad: false,
       theme: isDark ? 'dark' : 'neutral',
@@ -11,8 +28,8 @@
 
     document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('code.language-mermaid').forEach(function (el) {
-        const pre = el.closest('pre') || el;
-        const div = document.createElement('div');
+        var pre = el.closest('pre') || el;
+        var div = document.createElement('div');
         div.className = 'mermaid';
         div.textContent = el.textContent;
         div.style.cssText = 'text-align:center;margin:2rem auto;max-width:100%;overflow-x:auto;';
