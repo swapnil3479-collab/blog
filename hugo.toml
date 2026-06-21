@@ -37,11 +37,11 @@ paginate = 10
 
   [[params.profileMode.buttons]]
     name = "Browse Posts →"
-    url = "/posts/"
+    url = "/blog/posts/"
 
   [[params.profileMode.buttons]]
     name = "Search"
-    url = "/search/"
+    url = "/blog/search/"
 
   [[params.socialIcons]]
     name = "github"
