@@ -16,3 +16,7 @@ Subscribe below and you'll get a short email every time I publish something new.
   allowfullscreen
   style="display:block;margin:0 auto;max-width:100%;border:none;">
 </iframe>
+
+<p style="text-align:center;font-size:14px;color:#6b7280;margin-top:12px;">
+  After subscribing, check your <strong>spam or junk folder</strong> for a confirmation email and mark it as <strong>Not Spam</strong> — this ensures future emails reach your inbox.
+</p>
