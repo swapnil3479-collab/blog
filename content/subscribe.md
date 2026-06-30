@@ -18,5 +18,5 @@ Subscribe below and you'll get a short email every time I publish something new.
 </iframe>
 
 <p style="text-align:center;font-size:14px;color:#6b7280;margin-top:12px;">
-  After subscribing, check your <strong>spam or junk folder</strong> for a confirmation email and mark it as <strong>Not Spam</strong> — this ensures future emails reach your inbox.
+  After subscribing, check your <strong>Promotions tab</strong> (Gmail) or <strong>spam/junk folder</strong> for a confirmation email and mark it as <strong>Not Spam</strong> — this ensures future emails reach your inbox.
 </p>
