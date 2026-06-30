@@ -1,6 +1,22 @@
 <!-- Reading progress bar -->
 <div id="reading-progress"></div>
 
+<!-- Subscribe nudge — shown only on single posts -->
+<div id="subscribe-nudge" style="display:none;">
+  <div class="subscribe-nudge-inner">
+    <p class="subscribe-nudge-label">Enjoyed this? Get the next one in your inbox.</p>
+    <form
+      action="https://buttondown.email/api/emails/embed-subscribe/BUTTONDOWN_USERNAME"
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://buttondown.email/BUTTONDOWN_USERNAME','popupwindow')"
+      class="subscribe-nudge-form">
+      <input type="email" name="email" placeholder="your@email.com" required>
+      <button type="submit">Subscribe →</button>
+    </form>
+  </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>
   (function () {
@@ -15,6 +31,12 @@
       }
       window.addEventListener('scroll', updateBar, { passive: true });
       updateBar();
+    }
+
+    // Show subscribe nudge only on post pages (URL contains /posts/)
+    var nudge = document.getElementById('subscribe-nudge');
+    if (nudge && window.location.pathname.indexOf('/posts/') !== -1) {
+      nudge.style.display = 'block';
     }
 
     // Mermaid diagrams
