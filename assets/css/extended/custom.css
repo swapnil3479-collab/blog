@@ -557,3 +557,18 @@ a.tag:hover {
   transform: translateY(-1px);
   filter: brightness(1.08);
 }
+
+/* Subscribe nudge CTA button */
+.subscribe-nudge-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #fff !important;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 8px;
+  transition: opacity 0.15s;
+}
+.subscribe-nudge-btn:hover { opacity: 0.85; }
