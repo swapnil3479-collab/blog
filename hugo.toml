@@ -36,6 +36,9 @@ paginate = 10
     imageHeight = 100
 
   [[params.profileMode.buttons]]
+    name = "Subscribe →"
+    url = "/blog/subscribe/"
+  [[params.profileMode.buttons]]
     name = "Browse Posts →"
     url = "/blog/posts/"
 
@@ -66,6 +69,11 @@ paginate = 10
     name = "Tags"
     url = "/tags/"
     weight = 20
+  [[menu.main]]
+    identifier = "subscribe"
+    name = "Subscribe"
+    url = "/subscribe/"
+    weight = 10
   [[menu.main]]
     identifier = "about"
     name = "About"
