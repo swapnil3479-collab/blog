@@ -2,6 +2,7 @@
 title: "Subscribe"
 description: "Get a short email whenever I publish something new. No spam, just signal."
 layout: "page"
+ShowShareButtons: false
 ---
 
 I write about AI, technology, and what's actually happening — no hype, no fluff.
