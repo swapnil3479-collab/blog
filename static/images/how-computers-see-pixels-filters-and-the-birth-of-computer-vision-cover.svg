@@ -1,0 +1,53 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/><stop offset="50%" stop-color="#2d2a7a"/><stop offset="100%" stop-color="#3730a3"/>
+    </linearGradient>
+    <linearGradient id="accent-h" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8"/><stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="left-bar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Faint grid -->
+  <g opacity="0.035" stroke="white" stroke-width="1"><line x1="0" y1="0" x2="0" y2="630"/><line x1="80" y1="0" x2="80" y2="630"/><line x1="160" y1="0" x2="160" y2="630"/><line x1="240" y1="0" x2="240" y2="630"/><line x1="320" y1="0" x2="320" y2="630"/><line x1="400" y1="0" x2="400" y2="630"/><line x1="480" y1="0" x2="480" y2="630"/><line x1="560" y1="0" x2="560" y2="630"/><line x1="640" y1="0" x2="640" y2="630"/><line x1="720" y1="0" x2="720" y2="630"/><line x1="800" y1="0" x2="800" y2="630"/><line x1="880" y1="0" x2="880" y2="630"/><line x1="960" y1="0" x2="960" y2="630"/><line x1="1040" y1="0" x2="1040" y2="630"/><line x1="1120" y1="0" x2="1120" y2="630"/><line x1="1200" y1="0" x2="1200" y2="630"/><line x1="0" y1="0" x2="1200" y2="0"/><line x1="0" y1="80" x2="1200" y2="80"/><line x1="0" y1="160" x2="1200" y2="160"/><line x1="0" y1="240" x2="1200" y2="240"/><line x1="0" y1="320" x2="1200" y2="320"/><line x1="0" y1="400" x2="1200" y2="400"/><line x1="0" y1="480" x2="1200" y2="480"/><line x1="0" y1="560" x2="1200" y2="560"/></g>
+
+  <!-- Decorative motif (diamonds) -->
+  <polygon points="1150,20 1180,50 1150,80 1120,50" fill="none" stroke="white" stroke-width="1.1" opacity="0.14"/><polygon points="1098,46 1128,76 1098,106 1068,76" fill="none" stroke="white" stroke-width="1.1" opacity="0.12"/><polygon points="1046,20 1076,50 1046,80 1016,50" fill="none" stroke="white" stroke-width="1.1" opacity="0.10"/><polygon points="994,46 1024,76 994,106 964,76" fill="none" stroke="white" stroke-width="1.1" opacity="0.09"/><polygon points="942,20 972,50 942,80 912,50" fill="none" stroke="white" stroke-width="1.1" opacity="0.07"/><polygon points="890,46 920,76 890,106 860,76" fill="none" stroke="white" stroke-width="1.1" opacity="0.05"/><polygon points="1150,72 1180,102 1150,132 1120,102" fill="none" stroke="white" stroke-width="1.1" opacity="0.14"/><polygon points="1098,98 1128,128 1098,158 1068,128" fill="none" stroke="white" stroke-width="1.1" opacity="0.12"/><polygon points="1046,72 1076,102 1046,132 1016,102" fill="none" stroke="white" stroke-width="1.1" opacity="0.10"/><polygon points="994,98 1024,128 994,158 964,128" fill="none" stroke="white" stroke-width="1.1" opacity="0.09"/><polygon points="942,72 972,102 942,132 912,102" fill="none" stroke="white" stroke-width="1.1" opacity="0.07"/><polygon points="890,98 920,128 890,158 860,128" fill="none" stroke="white" stroke-width="1.1" opacity="0.05"/><polygon points="1150,124 1180,154 1150,184 1120,154" fill="none" stroke="white" stroke-width="1.1" opacity="0.14"/><polygon points="1098,150 1128,180 1098,210 1068,180" fill="none" stroke="white" stroke-width="1.1" opacity="0.12"/><polygon points="1046,124 1076,154 1046,184 1016,154" fill="none" stroke="white" stroke-width="1.1" opacity="0.10"/><polygon points="994,150 1024,180 994,210 964,180" fill="none" stroke="white" stroke-width="1.1" opacity="0.09"/><polygon points="942,124 972,154 942,184 912,154" fill="none" stroke="white" stroke-width="1.1" opacity="0.07"/><polygon points="890,150 920,180 890,210 860,180" fill="none" stroke="white" stroke-width="1.1" opacity="0.05"/><polygon points="1150,176 1180,206 1150,236 1120,206" fill="none" stroke="white" stroke-width="1.1" opacity="0.14"/><polygon points="1098,202 1128,232 1098,262 1068,232" fill="none" stroke="white" stroke-width="1.1" opacity="0.12"/><polygon points="1046,176 1076,206 1046,236 1016,206" fill="none" stroke="white" stroke-width="1.1" opacity="0.10"/><polygon points="994,202 1024,232 994,262 964,232" fill="none" stroke="white" stroke-width="1.1" opacity="0.09"/><polygon points="942,176 972,206 942,236 912,206" fill="none" stroke="white" stroke-width="1.1" opacity="0.07"/><polygon points="890,202 920,232 890,262 860,232" fill="none" stroke="white" stroke-width="1.1" opacity="0.05"/><polygon points="1150,228 1180,258 1150,288 1120,258" fill="none" stroke="white" stroke-width="1.1" opacity="0.14"/><polygon points="1098,254 1128,284 1098,314 1068,284" fill="none" stroke="white" stroke-width="1.1" opacity="0.12"/><polygon points="1046,228 1076,258 1046,288 1016,258" fill="none" stroke="white" stroke-width="1.1" opacity="0.10"/><polygon points="994,254 1024,284 994,314 964,284" fill="none" stroke="white" stroke-width="1.1" opacity="0.09"/><polygon points="942,228 972,258 942,288 912,258" fill="none" stroke="white" stroke-width="1.1" opacity="0.07"/><polygon points="890,254 920,284 890,314 860,284" fill="none" stroke="white" stroke-width="1.1" opacity="0.05"/><polygon points="1150,280 1180,310 1150,340 1120,310" fill="none" stroke="white" stroke-width="1.1" opacity="0.14"/><polygon points="1098,306 1128,336 1098,366 1068,336" fill="none" stroke="white" stroke-width="1.1" opacity="0.12"/><polygon points="1046,280 1076,310 1046,340 1016,310" fill="none" stroke="white" stroke-width="1.1" opacity="0.10"/><polygon points="994,306 1024,336 994,366 964,336" fill="none" stroke="white" stroke-width="1.1" opacity="0.09"/><polygon points="942,280 972,310 942,340 912,310" fill="none" stroke="white" stroke-width="1.1" opacity="0.07"/><polygon points="890,306 920,336 890,366 860,336" fill="none" stroke="white" stroke-width="1.1" opacity="0.05"/><polygon points="1150,332 1180,362 1150,392 1120,362" fill="none" stroke="white" stroke-width="1.1" opacity="0.14"/><polygon points="1098,358 1128,388 1098,418 1068,388" fill="none" stroke="white" stroke-width="1.1" opacity="0.12"/><polygon points="1046,332 1076,362 1046,392 1016,362" fill="none" stroke="white" stroke-width="1.1" opacity="0.10"/><polygon points="994,358 1024,388 994,418 964,388" fill="none" stroke="white" stroke-width="1.1" opacity="0.09"/><polygon points="942,332 972,362 942,392 912,362" fill="none" stroke="white" stroke-width="1.1" opacity="0.07"/><polygon points="890,358 920,388 890,418 860,388" fill="none" stroke="white" stroke-width="1.1" opacity="0.05"/><polygon points="1150,384 1180,414 1150,444 1120,414" fill="none" stroke="white" stroke-width="1.1" opacity="0.14"/><polygon points="1098,410 1128,440 1098,470 1068,440" fill="none" stroke="white" stroke-width="1.1" opacity="0.12"/><polygon points="1046,384 1076,414 1046,444 1016,414" fill="none" stroke="white" stroke-width="1.1" opacity="0.10"/><polygon points="994,410 1024,440 994,470 964,440" fill="none" stroke="white" stroke-width="1.1" opacity="0.09"/><polygon points="942,384 972,414 942,444 912,414" fill="none" stroke="white" stroke-width="1.1" opacity="0.07"/><polygon points="890,410 920,440 890,470 860,440" fill="none" stroke="white" stroke-width="1.1" opacity="0.05"/>
+
+  <!-- Bottom-left accent circle -->
+  <circle cx="50" cy="580" r="130" fill="none" stroke="white" stroke-width="1" opacity="0.05"/>
+  <circle cx="50" cy="580" r="65"  fill="none" stroke="white" stroke-width="1" opacity="0.07"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="7" height="630" fill="url(#left-bar)"/>
+
+  <!-- Title -->
+  
+  <text x="90" y="238" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif" font-size="56" font-weight="800" fill="white" opacity="0.95">How Computers See: Pixels,</text>
+  <text x="90" y="312" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif" font-size="56" font-weight="800" fill="white" opacity="0.95">Filters, and the Birth of</text>
+  <text x="90" y="386" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif" font-size="56" font-weight="800" fill="white" opacity="0.95">Computer Vision</text>
+
+  <!-- Accent divider -->
+  <rect x="90" y="468" width="90" height="4" rx="2" fill="url(#accent-h)"/>
+
+  <!-- Tags -->
+  <text x="90" y="520"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif"
+    font-size="21" font-weight="600" fill="#a5b4fc" letter-spacing="2.5" opacity="0.9">
+    COMPUTER VISION  ·  AI
+  </text>
+
+  <!-- Blog branding -->
+  <text x="1140" y="596"
+    font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif"
+    font-size="19" font-weight="700" fill="white" opacity="0.3"
+    text-anchor="end" letter-spacing="1.5">
+    SWAPNILSBLOG
+  </text>
+</svg>
